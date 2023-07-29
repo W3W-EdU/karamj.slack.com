@@ -1,0 +1,12 @@
+,key,fields.summary,fields.status.name,fields.reporter.name,fields.assignee.name,fields.priority.name
+0,RELENG-4828,DPEL download reports: get file sizes added to the .csv files,Backlog,kevin.sandi,kevin.sandi,Normal
+1,RELENG-4827,OpenJS - July status report,Done,valderrv,valderrv,Normal
+2,RELENG-4826,ORAN - create voting user in Gerrit ,Done,jwagantall,jwagantall,Normal
+3,RELENG-4825,ONAP - remove files from sdnc/oam history,In Progress,jwagantall,jwagantall,Normal
+4,RELENG-4824,Add Budget Forecast to the hosting spreadsheet,Blocked,valderrv,valderrv,Normal
+5,RELENG-4823,ORAN - Add .github magic repo,In Progress,jwagantall,jwagantall,Normal
+6,RELENG-4822,Upgrade Trino to latest on CL1 & CL2,In Progress,eball,eball,Normal
+7,RELENG-4821,LFIT - Refactor GHA workflows to only allow vote once,In Progress,jwagantall,jwagantall,Normal
+8,RELENG-4820,ONAP - Translate doc-rules job into GHA,In Progress,jwagantall,jwagantall,Normal
+9,RELENG-4819,OPNFV - Migrate Jenkins to Vexxhost ,In Progress,fpalumbo,fpalumbo,Normal
+10,RELENG-4818,CI Evaluation,Backlog,valderrv,valderrv,Normal
