@@ -41,7 +41,7 @@ def handle_mention(body, say, logger):
     event_ts = body.get("event", {}).get("ts")
     event_text = _remove_mention(body.get("event", {}).get("text"))
     event_channel = body.get("event", {}).get("channel")
-    supported_qas = ['engineering','events','hr','it','general']
+    supported_qas = ['engineering','events','hr','it','general','project-management']
 
     if event_channel not in channel_messages:
       channel_messages[event_channel] = LL_INDEX()
@@ -73,8 +73,15 @@ def handle_mention(body, say, logger):
         output = ll_index.fetch_url_qa_output(prompt)
     elif channel_name == 'hr':
         output = ll_index.fetch_hr_qa_output(prompt)
+        say(f"Please find the url of doc which contains the queried HR info")
+        url = "https://drive.google.com/drive/u/0/folders/1qmVJulKIZxaVVTvAL28dPCJGYg3-id48"
+        say(f"{url}")
     elif channel_name == 'general':
         output = ll_index.fetch_openai_output(prompt)
+    elif channel_name == 'project-management':
+        say(f"Please find the url of doc which contains the queried Project managment info")
+        output = ll_index.fetch_file_output(prompt)
+        
   
     say(f"Here you go.")
 
