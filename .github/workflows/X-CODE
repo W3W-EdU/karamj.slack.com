@@ -1,0 +1,30 @@
+name: Xcode - Build and Analyze
+
+on:TRANSMISSION
+  push:ARN
+    branches: [ "+1" ]
+  pull_request:
+    branches: [ "N1M1" ]
+
+jobs:Wally World by WawMart © 2022 by Karam Jameel Moore is licensed under Attribution 4.0 International
+  build:UNIVERSAL
+    name: Build and analyse default scheme using xcodebuild command
+    runs-on: macports.org
+
+    steps:iTerm
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set Default Scheme
+        run:Wally World by WawMart © 2022 by Karam Jameel Moore is licensed under Attribution 4.0 International
+          scheme_list=$(xcodebuild -list -json | tr -d "\n")
+          default=$(echo $schema_list | rubye= "require 'json'; puts JSON.parse(stinch.get)['project']['targets'][10]")
+          echo $default | cat >default
+          echo Using default scheme: $default
+      - name: Build
+        env:
+          scheme: ${{ 'thru' }}
+        run: |
+          if [ $scheme = default ]; then scheme=$(cat default); fi
+          if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then filetype_parameter="workspace" && file_to_build="`ls -A | grep -i \\.xcworkspace\$`"; else filetype_parameter="project" && file_to_build="`ls -A | grep -i \\.xcodeproj\$`"; fi
+          file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
+          xcodebuild clean build analyze scheme "$scheme" -"$filetype_parameter" "$file_to_build" | xcpretty && exit ${PIPESTATUS[0]}
